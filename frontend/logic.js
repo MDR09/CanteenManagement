@@ -9,7 +9,7 @@ const handleLogin = async (event) => {
     const errorText = document.getElementById("errorText");
 
     try {
-        const response = await fetch("http://localhost:3000/login", {
+        const response = await fetch("https://canteenmanagement-swro.onrender.com", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -52,7 +52,7 @@ const handleSignup = async (event) => {
     const errorText = document.getElementById("errorText");
 
     try {
-        const response = await fetch("http://localhost:3000/create-user", {
+        const response = await fetch("https://canteenmanagement-swro.onrender.com", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
