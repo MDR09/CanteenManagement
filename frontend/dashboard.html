@@ -246,7 +246,7 @@
         const sort = {};
         sort[sortField] = sortOrder;
 
-        fetch("http://localhost:3000/get-items", {
+        fetch("https://canteenmanagement-swro.onrender.com/get-items", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -308,7 +308,7 @@
       async function updateCart(itemId, quantity) {
         const userId = JSON.parse(localStorage.getItem("user"))._id;
         console.log(userId);
-        const updateCart = await fetch("http://localhost:3000/update-order", {
+        const updateCart = await fetch("https://canteenmanagement-swro.onrender.com/update-order", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

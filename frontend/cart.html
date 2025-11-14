@@ -224,7 +224,7 @@
 <script>
   async function paid() {
     document.getElementById("bill-summary").innerHTML = "";
-    const payment = await fetch("http://localhost:3000/payment", {
+    const payment = await fetch("https://canteenmanagement-swro.onrender.com/payment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -257,7 +257,7 @@
     document.getElementById("bill-summary").innerHTML = "";
   }
   function prepareBillSummary() {
-    fetch("http://localhost:3000/cart", {
+    fetch("https://canteenmanagement-swro.onrender.com/cart", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -305,7 +305,7 @@
     window.location.href = "dashboard.html";
   }
   function loadItems() {
-    fetch("http://localhost:3000/cart", {
+    fetch("https://canteenmanagement-swro.onrender.com/cart", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -367,7 +367,7 @@
   }
   async function updateCart(itemId, quantity) {
     const userId = JSON.parse(localStorage.getItem("user"))._id;
-    const updateCart = await fetch("http://localhost:3000/update-order", {
+    const updateCart = await fetch("https://canteenmanagement-swro.onrender.com/update-order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -416,7 +416,7 @@
   }
 
   function updateTotal() {
-    fetch("http://localhost:3000/cart", {
+    fetch("https://canteenmanagement-swro.onrender.com/cart", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + localStorage.getItem("token"),
